@@ -1,0 +1,64 @@
+# ── Entorno y secretos ────────────────────────
+.env
+*.key
+*.pem
+*.p12
+
+# ── Python ────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+wheels/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# ── Entornos virtuales ────────────────────────
+.env/
+.venv/
+venv/
+env/
+ENV/
+
+# ── Playwright ────────────────────────────────
+# Browsers descargados localmente (pesados, se reinstalan con `playwright install`)
+/ms-playwright/
+playwright/.local-browsers/
+
+# ── Docker ────────────────────────────────────
+# Volúmenes y overrides locales
+docker-compose.override.yml
+
+# ── Outputs / artefactos ──────────────────────
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+
+# ── IDEs y editores ───────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Logs ──────────────────────────────────────
+*.log
+logs/
+
+# ── Coverage y tests ──────────────────────────
+.coverage
+.pytest_cache/
+htmlcov/

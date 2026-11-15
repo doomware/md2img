@@ -1,0 +1,17 @@
+services:
+  md2img:
+    build: .
+    image: md2img:latest
+    container_name: md2img
+    ports:
+      - "3030:3030"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+      - API_KEY=${API_KEY:-}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3030/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
